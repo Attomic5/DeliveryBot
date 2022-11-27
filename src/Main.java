@@ -45,9 +45,9 @@ public class Main {
                             if (kv.getKey().equals(task.get())) {
                                 counter++;
                                 sizeToFreq.put(task.get(), counter);
-                                sizeToFreq.notify();
                             }
                         }
+                        sizeToFreq.notify();
                     } catch (InterruptedException e) {
                         return;
                     } catch (ExecutionException e) {
